@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maze Game - Lock & Key</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <div class="background-pattern"></div>
+  <div id="main">
+    <h1>Maze Game</h1>
+    
+    <!-- Start Screen -->
+    <div id="start-screen">
+      <h2>Welcome to the Lock & Key Maze!</h2>
+      <p>Use arrow keys or WASD to find the key and unlock the exit!</p>
+      
+      <div class="difficulty-selection">
+        <h3>Choose Difficulty Level:</h3>
+        <div class="difficulty-buttons">
+          <button onclick="startGame('easy')" class="difficulty-btn easy">Easy (8x8)</button>
+          <button onclick="startGame('medium')" class="difficulty-btn medium">Medium (12x12)</button>
+          <button onclick="startGame('hard')" class="difficulty-btn hard">Hard (16x16)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="hidden">
+      <div class="game-info">
+        <p>Moves: <span id="move-counter">0</span></p>
+        <p>Difficulty: <span id="current-difficulty"></span></p>
+        <button onclick="resetGame()" class="control-btn">New Game</button>
+      </div>
+      <canvas id="mazeCanvas" width="500" height="500"></canvas>
+    </div>
+
+    <!-- Victory Screen -->
+    <div id="victory-screen" class="hidden">
+      <h2>🎉 Congratulations!</h2>
+      <p id="victory-message"></p>
+      <div class="victory-buttons">
+        <button onclick="resetGame()" class="victory-btn">Play Again</button>
+        <button onclick="showStartScreen()" class="victory-btn">Change Difficulty</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

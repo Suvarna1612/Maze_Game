@@ -1,6 +1,7 @@
 # 🔐 Lock & Key Maze Game
 
 A modern, interactive maze game built with HTML5 Canvas, featuring a lock and key theme with beautiful animations and effects.
+Find the demo here: https://vercel.com/suvarnas-projects-f65533d4/maze-game
 
 ## 🎮 Game Overview
 
